@@ -9,7 +9,7 @@ const SiteNav = () => {
   return (
     <Navbar expand="lg" className="bg-dark">
       <Container className="d-flex align-items-center">
-        <Link className="text-warning" to="/Home">
+        <Link className="text-warning" to="/">
           <h2>Shopify</h2>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

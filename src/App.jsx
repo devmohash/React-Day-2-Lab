@@ -14,6 +14,7 @@ const App = () => {
         <SiteNav></SiteNav>
 
         <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
           <Route path="/Home" element={<Home></Home>}></Route>
           <Route path="/About" element={<About></About>}></Route>
           <Route path="/Contactus" element={<ContactUs></ContactUs>}></Route>
