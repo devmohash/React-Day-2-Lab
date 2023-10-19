@@ -13,7 +13,7 @@ const App = () => {
     <BrowserRouter>
       <div className="App">
         <SiteNav></SiteNav>
-        <HeroSection></HeroSection>
+        
 
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>

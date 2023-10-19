@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import Row from "react-bootstrap/Row";
+import "./Register.css";
 
 const Register = () => {
   const [validated, setValidated] = useState(false);
@@ -19,9 +19,8 @@ const Register = () => {
   };
 
   return (
-    <section className="form_section py-5 bg-secondary">
+    <section className="form_section  bg-secondary">
       <div className="container d-flex justify-content-center">
-
         <Form
           noValidate
           validated={validated}
@@ -36,7 +35,9 @@ const Register = () => {
           >
             <Form.Control required type="text" placeholder="First name" />
 
-            <Form.Control.Feedback type="invalid" className="text-warning">Required Field</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid" className="text-warning">
+              Required Field
+            </Form.Control.Feedback>
           </Form.Group>
 
           <Form.Group
@@ -46,7 +47,9 @@ const Register = () => {
             className="mb-4"
           >
             <Form.Control required type="text" placeholder="Last name" />
-            <Form.Control.Feedback type="invalid" className="text-warning">Required Field</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid" className="text-warning">
+              Required Field
+            </Form.Control.Feedback>
           </Form.Group>
 
           <Form.Group
@@ -110,7 +113,6 @@ const Register = () => {
               label="Agree to terms and conditions"
               feedback="You must agree before submitting."
               feedbackType="invalid"
-              
             />
           </Form.Group>
           <Button type="submit">Submit</Button>
