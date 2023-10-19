@@ -1,13 +1,12 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import "./SiteNav.css";
 
 const SiteNav = () => {
   return (
-    <Navbar expand="lg" className="bg-dark">
+    <Navbar expand="lg" className="bg-dark position-fixed w-100 shadow z-1 ">
       <Container className="d-flex align-items-center">
         <Link className="text-warning" to="/">
           <h2>Shopify</h2>
