@@ -2,16 +2,20 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import StarRatings from "react-star-ratings";
+import Spinner from "react-bootstrap/Spinner";
 
 const ProductDetailsCard = () => {
   const [product, setProduct] = useState({});
+  const [spinner, setSpinner] = useState(false);
 
   const params = useParams();
 
   const getSingleProduct = () => {
+    setSpinner(true);
     return fetch(`https://fakestoreapi.com/products/${params.id}`)
       .then((res) => res.json())
       .then((json) => {
+        setSpinner(false);
         setProduct(json);
       });
   };
@@ -19,6 +23,14 @@ const ProductDetailsCard = () => {
   useEffect(() => {
     getSingleProduct();
   }, []);
+
+  if (spinner) {
+    return (
+      <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </Spinner>
+    );
+  }
 
   return (
     <div className="col-8 d-flex align-items-center shadow rounded py-4 bg-light">

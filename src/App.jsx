@@ -7,13 +7,12 @@ import ContactUs from "./components/ContactUs ";
 import ProductDetails from "./components/ProductDetails";
 import Register from "./components/Register";
 import Cart from "./components/Cart";
-import HeroSection from "./components/HeroSection";
+
 const App = () => {
   return (
     <BrowserRouter>
       <div className="App">
         <SiteNav></SiteNav>
-        
 
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
